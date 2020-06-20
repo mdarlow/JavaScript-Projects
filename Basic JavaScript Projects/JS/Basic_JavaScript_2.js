@@ -9,3 +9,13 @@ function myFunction()   {
     sentence += " a lot from this course!";
     document.getElementById("Concatenate").innerHTML = sentence;
 }
+
+function multiplyThree(num1, num2, num3) {
+  return num1*num2*num3;
+}
+document.write(multiplyThree(3.54, 9, 73));
+
+function sayHello() {
+    document.getElementById("hi").innerHTML = "Hello World";
+}
+
