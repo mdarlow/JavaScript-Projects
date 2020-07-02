@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Challenge 309</title>
+        <script 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+        </script>
+    </head>
+
+    <script>
+        $(document).ready(function() {
+            $("html").append(
+                "<body>\
+                    <p>\
+                        The following buttons should make this text fade \
+                        out over the course of 3 seconds and fade back in, \
+                        respectively:\
+                    </p>\
+                    <form>\
+                        <input id='fadeout' type='button' value='Fade out!'>\
+                        <input id='fadein' type='button' value='Fade in!'>\
+                    </form>\
+                </body>"
+            );
+            $('#fadeout').click(function() {
+                $("p").fadeOut(3000);
+            });
+            $('#fadein').click(function() {
+                $("p").fadeIn(3000);
+            });
+        });
+    </script>
+
+</html>
