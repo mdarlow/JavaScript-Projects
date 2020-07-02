@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Page 296</title>
+    </head>
+    <body>
+        <h1>Page 296 -- onreadystatechange</h1>
+        <p>
+            Push button for definition of the onreadystatechange property:
+        </p>
+
+        <div id="demo">
+            <button type="button" onclick="loadDoc()">Click me!</button>
+        </div>
+        <script>
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML = 
+                        this.responseText;
+                    }
+                };
+                xhttp.open("GET", "text.html", true);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>
